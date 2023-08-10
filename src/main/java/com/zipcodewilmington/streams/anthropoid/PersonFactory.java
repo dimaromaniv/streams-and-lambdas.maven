@@ -16,6 +16,7 @@ import java.util.stream.Stream;
  */
 public final class PersonFactory {
     List<Person> list;
+
     public PersonFactory() {
         this.list = new ArrayList();
         /** this class is not to be instantiated */
@@ -45,6 +46,7 @@ public final class PersonFactory {
         return Stream.generate(this::createRandomPerson)
                 .limit(listSize)
                 .collect(Collectors.toList());
+
     }
 
 
@@ -53,10 +55,11 @@ public final class PersonFactory {
      * @return - Array of Person objects
      */ // TODO
     public Person[] createPersonArray(int arrayLength) {
-
         return Stream.generate(this::createRandomPerson)
                 .limit(arrayLength)
-                .toArray(Person[]::new);
+                .toArray(Person [] :: new);
+
+
     }
 
 
